@@ -96,7 +96,7 @@ function falar(pText) {
             console.error("Voz não encontrada.");
         }
         utterThis.pitch = 0.9;
-        utterThis.rate = 3;
+        utterThis.rate = 2.5;
         utterThis.volume = 1;
         synth.speak(utterThis);
         utterThis.onpause = function (event) { }
