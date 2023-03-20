@@ -14,7 +14,7 @@ if (localStorage.getItem('key') !== '') {
     key.value = localStorage.getItem('key')
 }
 
-function ret() {key.style.backgroundColor = 'transparent'}
+function ret() { key.style.backgroundColor = 'transparent' }
 function ouvindo() {
     if (key.value === '') {
         key.style.backgroundColor = 'rgba(255, 0, 0, 0.800)'
@@ -82,7 +82,19 @@ function falar(pText) {
     try {
         var synth = window.speechSynthesis;
         var utterThis = new SpeechSynthesisUtterance(pText);
-        utterThis.voice = window.speechSynthesis.getVoices()[0]
+        // Obtém a lista de vozes disponíveis
+        let voices = window.speechSynthesis.getVoices();
+
+        // Procura pela voz do Microsoft Daniel - Portuguese (Brazil)
+        let portugueseVoice = voices.find(voice => voice.name === "Microsoft Daniel - Portuguese (Brazil)");
+
+        // Se a voz for encontrada, define ela como a voz a ser usada
+        if (portugueseVoice) {
+            utterThis.voice = portugueseVoice;
+        }
+        else {
+            console.error("Voz não encontrada.");
+        }
         utterThis.pitch = 0.9;
         utterThis.rate = 3;
         utterThis.volume = 1;
