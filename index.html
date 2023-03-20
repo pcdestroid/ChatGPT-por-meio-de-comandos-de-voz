@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Edite</title>
+</head>
+<body>
+    <h1>Edite</h1>
+    <div class="main">
+        <label>Pergunta:</label>
+        <div class="div-qst">
+            <input class="question"></input><span class="icon-mic"><ion-icon name="mic"></ion-icon></span>
+        </div>
+
+        <label>Resposta:</label>
+        <div class="div-rsp">
+            <textarea class="response"></textarea><span class="icon-speak"><ion-icon
+                    name="volume-high"></ion-icon></span>
+        </div>
+        <button class="toAsk">To ask (Press G)</button>
+
+        <a href="https://platform.openai.com/account/api-keys" target="_blank">Criar API KEY</a>
+        <label>API key:</label>
+        <input class="key" type="password" onchange="javascript:ret()"></input>
+
+        <p>Aproveite a praticidade de usar o ChatGPT por meio de comandos de voz, sem precisar digitar no teclado. E não
+            se preocupe, sua chave de API é armazenada localmente em seu computador, garantindo sua segurança e privacidade.</p>
+    </div>
+    <div class="config">
+    </div>
+    <footer>
+        <p>Copyright © 2023 por AlanFrancis. Todos os direitos reservados.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
